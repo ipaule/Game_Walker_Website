@@ -1,10 +1,17 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import './App.css';
+import { Link, useLocation } from 'react-router-dom';
 import LaunchScreen from './LaunchScreen';
+import './App.css';
 
-function App() {
-  const [showLaunchScreen, setShowLaunchScreen] = useState(true);
+function MainPage() {
+  const location = useLocation();
+  
   const [showNotification, setShowNotification] = useState(false);
+
+  const [showLaunchScreen, setShowLaunchScreen] = useState(() => {
+    const comingFromInternalPage = ['/setup', '/features', '/people'].includes(location.state?.from);
+    return !comingFromInternalPage;
+  });
 
   const handleLaunchScreenFinish = useCallback(() => {
     setShowLaunchScreen(false);
@@ -14,6 +21,9 @@ function App() {
     if (!showLaunchScreen) {
       document.body.classList.add('main-screen');
     }
+    return () => {
+      document.body.classList.remove('main-screen');
+    };
   }, [showLaunchScreen]);
 
   const handleDownloadClick = (e) => {
@@ -38,15 +48,21 @@ function App() {
   }
 
   return (
-    <div className="App main-screen">
+    <div>
       <header className="App-header">
         <img src={process.env.PUBLIC_URL + '/png/GameWalkerLogo.png'} className="App-logo" alt="Game Walker logo" />
         <nav className="App-nav">
-          <ul>
+          <ul style={{ display: 'flex', justifyContent: 'flex-end', listStyle: 'none', padding: 0 }}>
             <li><a href="#" onClick={handleDownloadClick}>Download</a></li>
-            <li><a href="#setup">Setup</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#people">People</a></li>
+            <li>
+              <Link to="/setup">Setup</Link>
+            </li>
+            <li>
+              <Link to="/features">Features</Link>
+            </li>
+            <li>
+              <Link to="/people">People</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -59,4 +75,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainPage;
