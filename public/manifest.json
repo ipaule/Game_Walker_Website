@@ -1,21 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Game Walker",
+  "name": "Game Walker - Your Gaming Companion",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "png/_AppIcon.png",
+      "sizes": "300x301",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "png/GameWalkerLogo.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "834x543"
     }
   ],
   "start_url": ".",
