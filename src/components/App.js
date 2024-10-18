@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import MainPage from './MainPage';
 import Setup from './Setup';
 import Features from './Features';
@@ -10,9 +10,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/features" element={<Features />} />
         <Route path="/setup" element={<Setup />} />
+        <Route path="/features" element={<Features />} />
         <Route path="/people" element={<People />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

@@ -1,16 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function People() {
   return (
-    <div>
-      <h1>Our Team</h1>
-      <ul>
-        <li>Person 1</li>
-        <li>Person 2</li>
-        <li>Person 3</li>
-      </ul>
-      <Link to="/" state={{ from: '/people' }}>Back to Home</Link>
+    <div className="People">
+      <Header />
+      <h1>People</h1>
+      {/* Add your people content here */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import './LaunchScreen.css';
 function LaunchScreen({ onFinish }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(-1);
   const [fadeState, setFadeState] = useState('out');
-  const images = ['Launching_Let.png', 'Launching_There.png', 'Launching_Be.png', 'Launching_Light.png'];
+  const images = ['LaunchingLet.png', 'LaunchingThere.png', 'LaunchingBe.png', 'LaunchingLight.png'];
 
   useEffect(() => {
     const startSequence = () => {
@@ -43,7 +43,7 @@ function LaunchScreen({ onFinish }) {
         {images.map((image, index) => (
           <img 
             key={image}
-            src={`${process.env.PUBLIC_URL}/png/${image}`}
+            src={`${process.env.PUBLIC_URL}/png/launching/${image}`}
             alt={`Launch ${index + 1}`} 
             className={`launch-image ${
               index <= currentImageIndex ? 'fade-in' : 'fade-out'

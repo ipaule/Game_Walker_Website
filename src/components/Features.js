@@ -1,16 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Header from './Header';
 
 function Features() {
   return (
-    <div>
+    <div className="Features">
+      <Header />
       <h1>Features</h1>
-      <ul>
-        <li>Feature 1</li>
-        <li>Feature 2</li>
-        <li>Feature 3</li>
-      </ul>
-      <Link to="/" state={{ from: '/features' }}>Back to Home</Link>
+      {/* Add your features content here */}
     </div>
   );
 }
