@@ -36,3 +36,9 @@
 .launch-image.fade-in {
   opacity: 1;
 }
+
+/* Move LaunchingBe.png and LaunchingLight.png up by 1 pixel */
+.launch-image[src*="LaunchingBe.png"],
+.launch-image[src*="LaunchingLight.png"] {
+  transform: translateY(-1px);
+}
