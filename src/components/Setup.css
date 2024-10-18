@@ -1,3 +1,7 @@
+.Setup {
+  /* Remove the padding-top from here */
+}
+
 .Setup-main {
   align-items: flex-start;
   padding-top: 1rem;
@@ -9,7 +13,7 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 180px auto 0; /* Add top margin here to push content below header */
   padding: 0 2rem;
 }
 
@@ -71,7 +75,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0 1rem;
+  padding: 0 7rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
