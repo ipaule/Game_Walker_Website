@@ -43,7 +43,7 @@ function LaunchScreen({ onFinish }) {
         {images.map((image, index) => (
           <img 
             key={image}
-            src={`${process.env.PUBLIC_URL}/png/${image}`}
+            src={`${process.env.PUBLIC_URL}/png/launching/${image}`}
             alt={`Launch ${index + 1}`} 
             className={`launch-image ${
               index <= currentImageIndex ? 'fade-in' : 'fade-out'

@@ -8,7 +8,16 @@ function Setup() {
   const totalSteps = 20;
   const navigate = useNavigate();
 
-  const isHostStep = currentStep === 1; // Add more steps here if needed
+  const getStepType = (step) => {
+    // Define step ranges for each type
+    // This is an example, adjust according to your actual step distribution
+    if (step === 1) return 'host';
+    if (step >= 2 && step <= 7) return 'player';
+    if (step >= 8 && step <= 14) return 'referee';
+    return 'general'; // for steps that don't belong to a specific role
+  };
+
+  const currentStepType = getStepType(currentStep);
 
   const getInstructionsForStep = (step) => {
     switch(step) {
@@ -21,7 +30,7 @@ function Setup() {
         );
       // Add cases for steps 2-20
       default:
-        return `Instructions for Step ${step}`;
+        return `Instructions for ${getStepType(step)} Step ${step}`;
     }
   };
 
@@ -50,17 +59,17 @@ function Setup() {
       <div className="Setup-content">
         <div className="Setup-labels">
           <img 
-            src={process.env.PUBLIC_URL + '/png/PlayerButton.png'} 
+            src={process.env.PUBLIC_URL + `/png/buttons/${currentStepType === 'player' ? 'Selected' : ''}PlayerButton.png`} 
             alt="Player" 
             className="Setup-button"
           />
           <img 
-            src={process.env.PUBLIC_URL + '/png/RefereeButton.png'} 
+            src={process.env.PUBLIC_URL + `/png/buttons/${currentStepType === 'referee' ? 'Selected' : ''}RefereeButton.png`} 
             alt="Referee" 
             className="Setup-button"
           />
           <img 
-            src={process.env.PUBLIC_URL + (isHostStep ? '/png/SelectedHostButton.png' : '/png/HostButton.png')} 
+            src={process.env.PUBLIC_URL + `/png/buttons/${currentStepType === 'host' ? 'Selected' : ''}HostButton.png`} 
             alt="Host" 
             className="Setup-button"
           />
@@ -92,7 +101,7 @@ function Setup() {
             ></div>
           ))}
         </div>
-        <div className="Setup-step-label">Step {currentStep}</div>
+        <div className="Setup-step-label">Step {currentStep} - {getStepType(currentStep).charAt(0).toUpperCase() + getStepType(currentStep).slice(1)}</div>
       </div>
     </div>
   );

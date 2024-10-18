@@ -38,7 +38,7 @@
 }
 
 /* Move LaunchingBe.png and LaunchingLight.png up by 1 pixel */
-.launch-image[src*="LaunchingBe.png"],
-.launch-image[src*="LaunchingLight.png"] {
+.launch-image[src*="/launching/LaunchingBe.png"],
+.launch-image[src*="/launching/LaunchingLight.png"] {
   transform: translateY(-1px);
 }
