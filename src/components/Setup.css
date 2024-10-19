@@ -35,7 +35,7 @@
 
 .Setup-main-content {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Change back to center */
   align-items: center;
   width: 100%;
   margin-bottom: 1rem;
@@ -43,11 +43,22 @@
   padding: 0 4rem;
 }
 
+/* Adjust this rule for steps with multiple images */
+.Setup-main-content .Setup-step-container.multiple-images {
+  margin-left: -1rem; /* Reduce the left margin */
+}
+
 .Setup-step-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 1rem;
+}
+
+.Setup-step-container.multiple-images {
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .Setup-step-image {
@@ -58,14 +69,25 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.Setup-step-container.multiple-images .Setup-step-image {
+  max-width: 25%;
+}
+
 .Setup-instructions {
-  max-width: 300px;
+  max-width: 380px;
   text-align: left;
-  margin-left: -2rem;
+  margin-left: 1rem;
   align-self: center;
 }
 
-.Setup-instructions p {
+.Setup-instructions-v2 {
+  max-width: 380px;
+  text-align: left;
+  margin-left: 0; /* Adjust this value */
+  align-self: center;
+}
+
+.Setup-instructions p, .Setup-instructions-v2 p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -75,7 +97,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0 7rem;
+  padding: 0 1rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -122,4 +144,19 @@
   font-size: 0.9rem;
   font-weight: normal;
   color: #666;
+}
+
+/* New rule for adjusting instructions position with multiple images */
+.Setup-step-container.multiple-images + .Setup-instructions-v2 {
+  margin-left: -2rem; /* Adjust this value as needed */
+}
+
+/* Ensure single image steps maintain their original layout */
+.Setup-main-content .Setup-step-container:not(.multiple-images) + .Setup-instructions {
+  margin-left: 1rem;
+}
+
+/* Use more specific selectors */
+.Setup-main-content .Setup-step-container.multiple-images + .Setup-instructions-v2 {
+  margin-left: -6rem; /* Adjust this value to move instructions slightly to the left for multiple images */
 }
