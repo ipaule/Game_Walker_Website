@@ -67,7 +67,7 @@ function Matching() {
       <Typography variant="h4" gutterBottom align="center">
         Matching Feature
       </Typography>
-      <Grid container spacing={2} alignItems="center" style={{ minHeight: '60vh' }}>
+      <Grid container spacing={2} alignItems="center" style={{ minHeight: '40vh' }}>
         <Grid item xs={1}>
           <IconButton onClick={handlePrevious} color="primary">
             <ArrowBackIosNewIcon />
