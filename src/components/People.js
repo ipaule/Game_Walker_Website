@@ -5,7 +5,7 @@ import './People.css'; // We'll create this file for custom styles
 
 const people = [
   { name: 'Sungjin Yi', image: '/png/people/Sungjin.jpeg', description: <>Founder<br />Backend, Web Developer</>, email: 'ipaule@gmail.com' },
-  { name: 'Jin Kim', image: '/png/people/Jin.jpeg', description: <>Frontend Developer<br /></>, email: 'jinkim2739@gmail.com', imageStyle: { objectPosition: '0 -9px' } },
+  { name: 'Jin Kim', image: '/png/people/Jin.jpeg', description: <>Frontend Developer<br /></>, email: 'jinkim2739@gmail.com', imageStyle: { objectPosition: '0 7px' } },
   { name: 'Noah Kim', image: '/png/people/Noah.png', description: <>Frontend Developer<br /></>, email: 'noah7203@berkeley.edu' },
   { name: 'Sam Kim', image: '/png/people/Sam.png', description: <>Frontend Developer<br /></>, email: 'noah7203@berkeley.edu' },
   { name: 'Claire Kang', image: '/png/people/Claire.png', description: <>Designer<br /></>, email: 'clarekang02@berkeley.edu' },

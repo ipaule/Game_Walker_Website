@@ -33,8 +33,9 @@ function Setup() {
       case 1:
         return (
           <>
-            First, the <i>Host</i> should tap <i>Create Game</i>.<br /><br />
-            If you accidentally closed the app,<br/> tap <i>Resume Game</i> to continue.
+            <i>To test the app, at least 3 people are required.</i><br /><br />
+            First, the <i>Host</i> should press <i>Create Game</i>.<br /><br />
+            If you accidentally closed the app,<br/> press <i>Resume Game</i> to continue.
           </>
         );
       case 2:
@@ -50,7 +51,7 @@ function Setup() {
         return (
           <>
             <i>Referees</i> should enter the <i>Game Code</i> provided from the host and name.<br /><br />
-            After tapping <i>Join</i>, referees will have to wait until the Host finishes the setup.
+            After pressing <i>Join</i>, referees will have to wait until the Host finishes the setup.
           </>
         );
       case 4:
@@ -76,7 +77,7 @@ function Setup() {
         return (
           <>
             The <i>Matching System</i> is a key feature of this app. It allows you to adjust the order of teams, with potential conflicts highlighted by color. <br /><br />
-            Note that the Stations may be displayed in a different order than initially entered. For more information, tap the ? button on top or click <span className="clickable-link" onClick={handleMatchingClick}>Features</span>.
+            Note that the Stations may be displayed in a different order than initially entered. For more information, press the ? button on top or click <span className="clickable-link" onClick={handleMatchingClick}>Features</span>.
           </>
         );
       case 7:
