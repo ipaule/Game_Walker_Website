@@ -1,0 +1,23 @@
+.People {
+  padding: 2rem 0;
+}
+
+.person-card {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .person-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .person-card .MuiAvatar-root {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}

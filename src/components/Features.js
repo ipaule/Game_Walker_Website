@@ -12,13 +12,13 @@ import StationInfo from './FeaturePage/StationInfo';
 import Timer from './FeaturePage/Timer';
 
 const buttonData = [
-  { name: 'Announcement', color: '#F6C1C1', Component: Announcement },
-  { name: 'Awards Hidden', color: '#FFE2BE', Component: AwardsHidden },
+  { name: 'Matching', color: '#F6C1C1', Component: Matching },
+  { name: 'Station Info', color: '#FFE2BE', Component: StationInfo },
   { name: 'Give Points', color: '#FFFDE2', Component: GivePoints },
   { name: 'Hide Points', color: '#E9F6D7', Component: HidePoints },
-  { name: 'Matching', color: '#C9E9EE', Component: Matching },
-  { name: 'Station Info', color: '#D2CCF4', Component: StationInfo },
-  { name: 'Timer', color: '#F6C1C1', Component: Timer },
+  { name: 'Timer', color: '#C9E9EE', Component: Timer },
+  { name: 'Announcement', color: '#D2CCF4', Component: Announcement },
+  { name: 'Awards Hidden', color: '#F4D0E3', Component: AwardsHidden },
 ];
 
 function Features() {
