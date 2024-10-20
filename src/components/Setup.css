@@ -160,3 +160,13 @@
 .Setup-main-content .Setup-step-container.multiple-images + .Setup-instructions-v2 {
   margin-left: -6rem; /* Adjust this value to move instructions slightly to the left for multiple images */
 }
+
+.clickable-link {
+  color: #0000EE;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.clickable-link:hover {
+  color: #551A8B;
+}

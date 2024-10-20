@@ -33,88 +33,87 @@ function Setup() {
       case 1:
         return (
           <>
-            First, the <strong>Host</strong> should tap <strong>Create Game</strong>.<br /><br />
-            If you accidentally closed the app, tap <strong>Resume Game</strong> to continue.
+            First, the <i>Host</i> should tap <i>Create Game</i>.<br /><br />
+            If you accidentally closed the app,<br/> tap <i>Resume Game</i> to continue.
           </>
         );
       case 2:
         return (
           <>
-            Choose <strong>Standard Mode</strong> <br />for events with stations and full features.<br /><br />
-            Choose <strong>Points Only Mode</strong> <br />for team-based events with score tracking only.<br /><br />
-            The <strong>Game Code</strong> will appear at the top of the screen.<br />
-            Share the game code with your <u>Referees</u>.
+            Choose <i>Standard Mode</i> <br />for events with stations and full features.<br /><br />
+            Choose <i>Points Only Mode</i> <br />for team-based events with score tracking only.<br /><br />
+            The <i>Game Code</i> will appear at the top of the screen.<br />
+            <u>Share the game code with your Referees</u>.
           </>
         );
       case 3:
         return (
           <>
-            <strong>Referees</strong> should enter the <strong>Game Code</strong> provided from the host and name.<br /><br />
-            After tapping <u>Join</u>, referees will have to wait until the Host finishes the setup.<br /><br />
+            <i>Referees</i> should enter the <i>Game Code</i> provided from the host and name.<br /><br />
+            After tapping <i>Join</i>, referees will have to wait until the Host finishes the setup.
           </>
         );
       case 4:
         return (
           <>
-            Host can now add <strong>Stations</strong> and their information.<br />
-            Station names and their assigned <u>Referees</u> are required. Ensure the <u>number of Stations</u> matches the <u>number of Referees</u>.<br /><br />
-            <strong>PVP</strong> stands for Player vs Player,<br /><strong>PVE</strong> stands for Player vs Environment.<br />
+            Host can now add <i>Stations</i> and their information.<br />
+            <i>Station names</i> and their assigned <i>Referees</i> are required. <u>Ensure the number of Stations matches the number of Referees</u>.<br /><br />
+            <i>PVP</i> stands for Player vs Player,<br /><i>PVE</i> stands for Player vs Environment.<br />
             Choose PVP if the Station involves competition between <u>two teams</u>,<br /> choose PVE if it's a challenge for a <u>single team</u>.
           </>
         );
       case 5:
         return (
           <>
-            Choose <strong>Standard Mode</strong> <br />for events with stations and full features.<br /><br />
-            Choose <strong>Points Only Mode</strong> <br />for team-based events with score tracking only.<br /><br />
-            The <strong>Game Code</strong> will appear at the top of the screen.<br />
-            Share the game code with your <strong>Referees</strong>.
+            <i>Station Time</i>: Duration each team spends at a station. <u>Make sure all stations have the same time.</u> <br /><br />
+            <i>Moving Time</i>: Interval for teams to move between stations.<br /><br />
+            <i>Rounds</i>: Number of stations each team will visit.<br /><br />
+            Enter the correct <i>Number of Teams</i> participating.
+
           </>
         );
       case 6:
         return (
           <>
-            <strong>Referees</strong> should enter the <strong>Game Code</strong> provided from the host and name.<br /><br />
-            After tapping <strong>Join </strong>, referees will have to wait until the Host finishes the setup.<br /><br />
+            The <i>Matching System</i> is a key feature of this app. It allows you to adjust the order of teams, with potential conflicts highlighted by color. <br /><br />
+            Note that the Stations may be displayed in a different order than initially entered. For more information, tap the ? button on top or click <span className="clickable-link" onClick={handleMatchingClick}>Features</span>.
           </>
         );
       case 7:
         return (
           <>
-            First, the <strong>Host</strong> should tap <strong>Create Game</strong>.<br /><br />
-            If you accidentally closed the app, tap <strong>Resume Game</strong> to continue.
+            The <i>Host</i> has completed the setup process.<br /><br />
+            Please review all details carefully.<br />
+            Once confirmed, setup <strong>cannot be modified</strong>.
           </>
         );
       case 8:
         return (
           <>
-            Choose <strong>Standard Mode</strong> <br />for events with stations and full features.<br /><br />
-            Choose <strong>Points Only Mode</strong> <br />for team-based events with score tracking only.<br /><br />
-            The <strong>Game Code</strong> will appear at the top of the screen.<br />
-            Share the game code with your <strong>Referees</strong>.
+            The <i>Referees</i> will be able toe see the left screen.<br />
+            Once the event <i>starts</i>, they will be able to see the right screen.
           </>
         );
       case 9:
         return (
           <>
-            <strong>Referees</strong> should enter the <strong>Game Code</strong> provided from the host and name.<br /><br />
-            After tapping <strong>Join </strong>, referees will have to wait until the Host finishes the setup.<br /><br />
+            <i>Players</i> will now be able to join the game.<br />
+            Please share the <i>Game Code</i> with them.
           </>
         );
       case 10:
         return (
           <>
-            First, the <strong>Host</strong> should tap <strong>Create Game</strong>.<br /><br />
-            If you accidentally closed the app, tap <strong>Resume Game</strong> to continue.
+            The Leader of the team should <i>Create Team</i> while others <i>Join Team</i>.<br /><br />
+            The Leader selects the team name and icon. <u>The team number should be assigned in advance by <i>Host</i></u>.<br /><br />
+            Made a mistake? No problem!<br />Just leave and rejoin or create a new team.
           </>
         );
       case 11:
         return (
           <>
-            Choose <strong>Standard Mode</strong> <br />for events with stations and full features.<br /><br />
-            Choose <strong>Points Only Mode</strong> <br />for team-based events with score tracking only.<br /><br />
-            The <strong>Game Code</strong> will appear at the top of the screen.<br />
-            Share the game code with your <strong>Referees</strong>.
+            By clicking <i>Game Start</i>, the event will begin.<br /><br />
+            Enjoy the game and explore our <span className="clickable-link" onClick={handleMatchingClick}>Features</span> for the full experience!<br /><br />
           </>
         );
       default:
@@ -139,6 +138,10 @@ function Setup() {
     const x = event.clientX - rect.left;
     const clickedStep = Math.ceil((x / rect.width) * totalSteps);
     setCurrentStep(clickedStep);
+  };
+
+  const handleMatchingClick = () => {
+    navigate('/features', { state: { selectedFeature: 'matching' } });
   };
 
   return (
