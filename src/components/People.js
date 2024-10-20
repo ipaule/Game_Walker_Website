@@ -8,7 +8,7 @@ const people = [
   { name: 'Jin Kim', image: '/png/people/Jin.jpeg', description: <>Frontend Developer<br /></>, email: 'jinkim2739@gmail.com', imageStyle: { objectPosition: '0 7px' } },
   { name: 'Noah Kim', image: '/png/people/Noah.png', description: <>Frontend Developer<br /></>, email: 'noah7203@berkeley.edu' },
   { name: 'Sam Kim', image: '/png/people/Sam.png', description: <>Frontend Developer<br /></>, email: 'noah7203@berkeley.edu' },
-  { name: 'Claire Kang', image: '/png/people/Claire.png', description: <>Designer<br /></>, email: 'clarekang02@berkeley.edu' },
+  { name: 'Claire Kang', image: '/png/people/Clare.png', description: <>Designer<br /></>, email: 'clarekang02@berkeley.edu' },
   { name: 'Person 6', image: '/png/people/person6.png', description: <>Web Developer<br /></>, email: 'shyang9711@berkeley.edu' },
 ];
 
