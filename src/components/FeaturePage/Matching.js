@@ -76,7 +76,7 @@ function Matching() {
         {currentIndex === 0 ? (
           <Grid item xs={10}>
             <Box display="flex" justifyContent="center" alignItems="center" height="100%">
-              <Typography variant="body1" align="center">
+              <Typography variant="body1" align="left">
                 {explanations[currentIndex].content}
               </Typography>
             </Box>
