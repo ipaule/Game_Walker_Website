@@ -1,0 +1,19 @@
+html, body, .Features {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Features {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  .feature-component-container {
+    margin: 0;
+    padding: 0;
+  }
+  
