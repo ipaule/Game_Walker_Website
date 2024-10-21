@@ -170,3 +170,28 @@
 .clickable-link:hover {
   color: #551A8B;
 }
+
+@media (max-width: 768px) {
+  .Setup-main-content {
+    flex-direction: column;
+  }
+
+  .Setup-step-container.multiple-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Setup-step-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .Setup-instructions.multiple-images {
+    margin-top: 1rem;
+  }
+
+  .Setup-arrow {
+    display: none;
+  }
+}

@@ -178,7 +178,7 @@ function Setup() {
               />
             ))}
           </div>
-          <div className={`${hasMultipleImages(currentStep) ? 'Setup-instructions-v2' : 'Setup-instructions'}`}>
+          <div className={`Setup-instructions ${hasMultipleImages(currentStep) ? 'multiple-images' : ''}`}>
             <p>{getInstructionsForStep(currentStep)}</p>
           </div>
           <button className="Setup-arrow next" onClick={handleNextStep} disabled={currentStep === totalSteps}>&#8594;</button>
