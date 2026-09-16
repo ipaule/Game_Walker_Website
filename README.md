@@ -1,3 +1,8 @@
+# [Game Walker Website](https://gamewalker.onrender.com)
+
+Responsive marketing/info site for the Game Walker iOS app, built with React and Cursor.ai.
+Mobile-first, accessible layout; hosts the app's onboarding tutorials and product walkthroughs.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
